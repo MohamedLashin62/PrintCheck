@@ -34,6 +34,134 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="PrintCheckDataSet.xsc">
+      <DependentUpon>PrintCheckDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCheckDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintCheckDataSet.xss">
+      <DependentUpon>PrintCheckDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSet1.xsc">
+      <DependentUpon>PrintCheckDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCheckDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintCheckDataSet1.xss">
+      <DependentUpon>PrintCheckDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSet2.xsc">
+      <DependentUpon>PrintCheckDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCheckDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintCheckDataSet2.xss">
+      <DependentUpon>PrintCheckDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSet3.xsc">
+      <DependentUpon>PrintCheckDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCheckDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintCheckDataSet3.xss">
+      <DependentUpon>PrintCheckDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSet4.xsc">
+      <DependentUpon>PrintCheckDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCheckDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintCheckDataSet4.xss">
+      <DependentUpon>PrintCheckDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\AddCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCheck.Designer.cs">
+      <DependentUpon>AddCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCheckDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCheckDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCheckDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCheckDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCheckDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCheckDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCheckDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCheckDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCheckDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCheckDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Trancaction\GenericClass.cs" />
+    <Compile Include="Trancaction\GenralConnection.cs" />
+    <Compile Include="Trancaction\Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\AddCheck.resx">
+      <DependentUpon>AddCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
