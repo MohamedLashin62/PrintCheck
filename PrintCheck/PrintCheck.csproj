@@ -109,11 +109,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\AddCheck.cs">
+    <Compile Include="Forms\FormAddCheck.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\AddCheck.Designer.cs">
-      <DependentUpon>AddCheck.cs</DependentUpon>
+    <Compile Include="Forms\FormAddCheck.Designer.cs">
+      <DependentUpon>FormAddCheck.cs</DependentUpon>
     </Compile>
     <Compile Include="PrintCheckDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -150,13 +150,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Trancaction\AddCheck.cs" />
     <Compile Include="Trancaction\GenericClass.cs" />
     <Compile Include="Trancaction\GenralConnection.cs" />
     <Compile Include="Trancaction\Program.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Forms\AddCheck.resx">
-      <DependentUpon>AddCheck.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormAddCheck.resx">
+      <DependentUpon>FormAddCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
