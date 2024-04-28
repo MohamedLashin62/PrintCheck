@@ -20,15 +20,9 @@ namespace PrintCheck.Forms
         public FormAddCheck()
         {
             InitializeComponent();
-            txtCheckNO.Clear();
-            txtCheckDate.Clear();
+            txtCheckNO.Clear();            
             txtChechAmount.Clear();
-            
-            //GenericClass generic = new GenericClass();
-            //generic.MaxIDPublic("MaxCheckIDSP");
-            //int id = generic.MaxIDPublic("MaxCheckIDSP") + 1;
-            //txtCheckNO.Text = id.ToString();
-
+            txtCheckNO.Focus();
         }
         
 
@@ -50,14 +44,70 @@ namespace PrintCheck.Forms
         private void btnAddCheck_Click(object sender, EventArgs e)
         {
             groupChecData.Enabled = true;
+            txtCheckNO.Focus();
             btnSave.Enabled = true;
+            btnUpdateCheck.Enabled = false; 
             GenericClass generic = new GenericClass();
             generic.MaxIDPublic("MaxCheckIDSP");
             int id = generic.MaxIDPublic("MaxCheckIDSP") + 1;
-            txtCheckNO.Text = id.ToString();
-        }         
-            
+            txtCheckID.Text = id.ToString();
+        }
+        private void txtCheckNO_KeyDown(object sender, KeyEventArgs e)
+        {
+            txtCheckNO.Focus();
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtChechAmount.Select();
             }
+        }
+        private void txtChechAmount_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtCheckELmoustavid.Select();
+            }
+        }
+
+        private void txtCheckELmoustavid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtCurrency.Select();
+            }
+        }
+
+        private void txtCurrency_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtBankName.Select();
+            }
+        }
+
+        private void txtBankName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtExpnses.Select();
+            }
+        }
+
+        private void txtExpnses_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               txtChekTyp.Select();
+            }
+        }
+
+        private void txtChekTyp_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSave.PerformClick();
+            }
+        }
+    }
         }
            
         

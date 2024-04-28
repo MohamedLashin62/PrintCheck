@@ -41,8 +41,7 @@
             this.viewCheckBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.printCheckDataSet = new PrintCheck.PrintCheckDataSet();
             this.view_CheckTableAdapter = new PrintCheck.PrintCheckDataSetTableAdapters.View_CheckTableAdapter();
-            this.txtCheckDate = new System.Windows.Forms.TextBox();
-            this.txtCheckNO = new System.Windows.Forms.TextBox();
+            this.txtCheckID = new System.Windows.Forms.TextBox();
             this.txtChechAmount = new System.Windows.Forms.TextBox();
             this.txtCheckELmoustavid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,10 +70,16 @@
             this.checkTypTableAdapter = new PrintCheck.PrintCheckDataSet4TableAdapters.CheckTypTableAdapter();
             this.pictCheck = new System.Windows.Forms.PictureBox();
             this.groupChecData = new System.Windows.Forms.GroupBox();
+            this.txtCheckNO = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAddCheck = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUpdateCheck = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewCheckBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSet)).BeginInit();
@@ -189,57 +194,52 @@
             // 
             this.view_CheckTableAdapter.ClearBeforeFill = true;
             // 
-            // txtCheckDate
+            // txtCheckID
             // 
-            this.txtCheckDate.BackColor = System.Drawing.Color.White;
-            this.txtCheckDate.ForeColor = System.Drawing.Color.Red;
-            this.txtCheckDate.Location = new System.Drawing.Point(103, 55);
-            this.txtCheckDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCheckDate.Name = "txtCheckDate";
-            this.txtCheckDate.Size = new System.Drawing.Size(121, 26);
-            this.txtCheckDate.TabIndex = 1;
-            this.txtCheckDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtCheckNO
-            // 
-            this.txtCheckNO.BackColor = System.Drawing.Color.White;
-            this.txtCheckNO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCheckNO.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtCheckNO.ForeColor = System.Drawing.Color.Red;
-            this.txtCheckNO.Location = new System.Drawing.Point(138, 23);
-            this.txtCheckNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCheckNO.Name = "txtCheckNO";
-            this.txtCheckNO.Size = new System.Drawing.Size(86, 30);
-            this.txtCheckNO.TabIndex = 1;
-            this.txtCheckNO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCheckID.BackColor = System.Drawing.Color.White;
+            this.txtCheckID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCheckID.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.txtCheckID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtCheckID.Location = new System.Drawing.Point(138, 43);
+            this.txtCheckID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCheckID.Name = "txtCheckID";
+            this.txtCheckID.Size = new System.Drawing.Size(86, 26);
+            this.txtCheckID.TabIndex = 1;
+            this.txtCheckID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtChechAmount
             // 
             this.txtChechAmount.BackColor = System.Drawing.Color.White;
-            this.txtChechAmount.ForeColor = System.Drawing.Color.Red;
-            this.txtChechAmount.Location = new System.Drawing.Point(61, 83);
+            this.txtChechAmount.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.txtChechAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtChechAmount.Location = new System.Drawing.Point(42, 126);
             this.txtChechAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtChechAmount.Name = "txtChechAmount";
-            this.txtChechAmount.Size = new System.Drawing.Size(163, 26);
+            this.txtChechAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtChechAmount.Size = new System.Drawing.Size(182, 26);
             this.txtChechAmount.TabIndex = 1;
             this.txtChechAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtChechAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChechAmount_KeyDown);
             // 
             // txtCheckELmoustavid
             // 
             this.txtCheckELmoustavid.BackColor = System.Drawing.Color.White;
-            this.txtCheckELmoustavid.ForeColor = System.Drawing.Color.Red;
-            this.txtCheckELmoustavid.Location = new System.Drawing.Point(15, 111);
+            this.txtCheckELmoustavid.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.txtCheckELmoustavid.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtCheckELmoustavid.Location = new System.Drawing.Point(15, 153);
             this.txtCheckELmoustavid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCheckELmoustavid.Name = "txtCheckELmoustavid";
+            this.txtCheckELmoustavid.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtCheckELmoustavid.Size = new System.Drawing.Size(209, 26);
             this.txtCheckELmoustavid.TabIndex = 1;
-            this.txtCheckELmoustavid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtCheckELmoustavid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCheckELmoustavid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCheckELmoustavid_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(251, 60);
+            this.label1.Location = new System.Drawing.Point(251, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 22);
             this.label1.TabIndex = 2;
@@ -249,7 +249,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(239, 29);
+            this.label2.Location = new System.Drawing.Point(243, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 22);
             this.label2.TabIndex = 2;
@@ -259,7 +259,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(258, 90);
+            this.label3.Location = new System.Drawing.Point(258, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 22);
             this.label3.TabIndex = 2;
@@ -269,7 +269,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(254, 146);
+            this.label4.Location = new System.Drawing.Point(254, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 22);
             this.label4.TabIndex = 2;
@@ -279,7 +279,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(268, 176);
+            this.label5.Location = new System.Drawing.Point(268, 217);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 22);
             this.label5.TabIndex = 2;
@@ -289,7 +289,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(245, 116);
+            this.label6.Location = new System.Drawing.Point(245, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 22);
             this.label6.TabIndex = 2;
@@ -299,7 +299,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(233, 205);
+            this.label7.Location = new System.Drawing.Point(233, 246);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 22);
             this.label7.TabIndex = 2;
@@ -309,7 +309,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(260, 238);
+            this.label8.Location = new System.Drawing.Point(260, 279);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 22);
             this.label8.TabIndex = 2;
@@ -317,18 +317,19 @@
             // 
             // txtCurrency
             // 
-            this.txtCurrency.BackColor = System.Drawing.Color.Silver;
+            this.txtCurrency.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtCurrency.DataSource = this.currenceyBindingSource;
             this.txtCurrency.DisplayMember = "CurrenceyName";
             this.txtCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtCurrency.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtCurrency.FormattingEnabled = true;
-            this.txtCurrency.Location = new System.Drawing.Point(73, 139);
+            this.txtCurrency.Location = new System.Drawing.Point(73, 180);
             this.txtCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCurrency.Name = "txtCurrency";
             this.txtCurrency.Size = new System.Drawing.Size(151, 30);
             this.txtCurrency.TabIndex = 3;
             this.txtCurrency.ValueMember = "CurrencyCod";
+            this.txtCurrency.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCurrency_KeyDown);
             // 
             // currenceyBindingSource
             // 
@@ -346,18 +347,19 @@
             // 
             // txtBankName
             // 
-            this.txtBankName.BackColor = System.Drawing.Color.Silver;
+            this.txtBankName.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtBankName.DataSource = this.banksBindingSource;
             this.txtBankName.DisplayMember = "BankName";
             this.txtBankName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtBankName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtBankName.FormattingEnabled = true;
-            this.txtBankName.Location = new System.Drawing.Point(15, 171);
+            this.txtBankName.Location = new System.Drawing.Point(15, 211);
             this.txtBankName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBankName.Name = "txtBankName";
             this.txtBankName.Size = new System.Drawing.Size(208, 30);
             this.txtBankName.TabIndex = 4;
             this.txtBankName.ValueMember = "BankCod";
+            this.txtBankName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBankName_KeyDown);
             // 
             // banksBindingSource
             // 
@@ -375,18 +377,19 @@
             // 
             // txtExpnses
             // 
-            this.txtExpnses.BackColor = System.Drawing.Color.Silver;
+            this.txtExpnses.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtExpnses.DataSource = this.expensesBindingSource;
             this.txtExpnses.DisplayMember = "ExpensesName";
             this.txtExpnses.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtExpnses.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtExpnses.FormattingEnabled = true;
-            this.txtExpnses.Location = new System.Drawing.Point(14, 203);
+            this.txtExpnses.Location = new System.Drawing.Point(50, 242);
             this.txtExpnses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtExpnses.Name = "txtExpnses";
-            this.txtExpnses.Size = new System.Drawing.Size(210, 30);
+            this.txtExpnses.Size = new System.Drawing.Size(174, 30);
             this.txtExpnses.TabIndex = 5;
             this.txtExpnses.ValueMember = "ExpensesCod";
+            this.txtExpnses.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtExpnses_KeyDown);
             // 
             // expensesBindingSource
             // 
@@ -400,19 +403,20 @@
             // 
             // txtChekTyp
             // 
-            this.txtChekTyp.BackColor = System.Drawing.Color.Silver;
+            this.txtChekTyp.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtChekTyp.DataSource = this.checkTypBindingSource;
             this.txtChekTyp.DisplayMember = "CheckTypNam";
             this.txtChekTyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtChekTyp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtChekTyp.FormattingEnabled = true;
-            this.txtChekTyp.Location = new System.Drawing.Point(14, 235);
+            this.txtChekTyp.Location = new System.Drawing.Point(50, 273);
             this.txtChekTyp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtChekTyp.MinimumSize = new System.Drawing.Size(174, 0);
             this.txtChekTyp.Name = "txtChekTyp";
-            this.txtChekTyp.Size = new System.Drawing.Size(210, 30);
+            this.txtChekTyp.Size = new System.Drawing.Size(174, 30);
             this.txtChekTyp.TabIndex = 6;
             this.txtChekTyp.ValueMember = "CheckTypCod";
+            this.txtChekTyp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChekTyp_KeyDown);
             // 
             // checkTypBindingSource
             // 
@@ -446,8 +450,9 @@
             // groupChecData
             // 
             this.groupChecData.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.groupChecData.Controls.Add(this.txtCheckDate);
+            this.groupChecData.Controls.Add(this.dateTimePicker4);
             this.groupChecData.Controls.Add(this.txtCheckNO);
+            this.groupChecData.Controls.Add(this.txtCheckID);
             this.groupChecData.Controls.Add(this.label8);
             this.groupChecData.Controls.Add(this.txtChekTyp);
             this.groupChecData.Controls.Add(this.label7);
@@ -460,6 +465,7 @@
             this.groupChecData.Controls.Add(this.txtBankName);
             this.groupChecData.Controls.Add(this.label3);
             this.groupChecData.Controls.Add(this.txtCurrency);
+            this.groupChecData.Controls.Add(this.label10);
             this.groupChecData.Controls.Add(this.label2);
             this.groupChecData.Controls.Add(this.label1);
             this.groupChecData.Enabled = false;
@@ -469,10 +475,34 @@
             this.groupChecData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupChecData.Name = "groupChecData";
             this.groupChecData.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupChecData.Size = new System.Drawing.Size(341, 283);
+            this.groupChecData.Size = new System.Drawing.Size(341, 327);
             this.groupChecData.TabIndex = 8;
             this.groupChecData.TabStop = false;
             this.groupChecData.Text = "بيانات الشيك";
+            // 
+            // txtCheckNO
+            // 
+            this.txtCheckNO.BackColor = System.Drawing.Color.White;
+            this.txtCheckNO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCheckNO.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.txtCheckNO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtCheckNO.Location = new System.Drawing.Point(88, 70);
+            this.txtCheckNO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCheckNO.Name = "txtCheckNO";
+            this.txtCheckNO.Size = new System.Drawing.Size(135, 26);
+            this.txtCheckNO.TabIndex = 1;
+            this.txtCheckNO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCheckNO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCheckNO_KeyDown);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(258, 76);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 22);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "رقم  الشيك";
             // 
             // label9
             // 
@@ -489,7 +519,7 @@
             this.btnAddCheck.BackColor = System.Drawing.Color.Blue;
             this.btnAddCheck.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.btnAddCheck.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAddCheck.Location = new System.Drawing.Point(16, 537);
+            this.btnAddCheck.Location = new System.Drawing.Point(16, 556);
             this.btnAddCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddCheck.Name = "btnAddCheck";
             this.btnAddCheck.Size = new System.Drawing.Size(113, 60);
@@ -498,18 +528,18 @@
             this.btnAddCheck.UseVisualStyleBackColor = false;
             this.btnAddCheck.Click += new System.EventHandler(this.btnAddCheck_Click);
             // 
-            // button2
+            // btnUpdateCheck
             // 
-            this.button2.BackColor = System.Drawing.Color.Blue;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(138, 537);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 60);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "تعديل شيك";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnUpdateCheck.BackColor = System.Drawing.Color.Blue;
+            this.btnUpdateCheck.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.btnUpdateCheck.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdateCheck.Location = new System.Drawing.Point(138, 556);
+            this.btnUpdateCheck.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdateCheck.Name = "btnUpdateCheck";
+            this.btnUpdateCheck.Size = new System.Drawing.Size(112, 60);
+            this.btnUpdateCheck.TabIndex = 10;
+            this.btnUpdateCheck.Text = "تعديل شيك";
+            this.btnUpdateCheck.UseVisualStyleBackColor = false;
             // 
             // btnSave
             // 
@@ -517,7 +547,7 @@
             this.btnSave.Enabled = false;
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSave.Location = new System.Drawing.Point(256, 537);
+            this.btnSave.Location = new System.Drawing.Point(256, 556);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(116, 60);
@@ -525,14 +555,51 @@
             this.btnSave.Text = "حفظ";
             this.btnSave.UseVisualStyleBackColor = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
+            this.dateTimePicker1.TabIndex = 11;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(0, 0);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 19);
+            this.dateTimePicker2.TabIndex = 12;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Location = new System.Drawing.Point(0, 0);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.RightToLeftLayout = true;
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 19);
+            this.dateTimePicker3.TabIndex = 13;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dateTimePicker4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker4.Location = new System.Drawing.Point(24, 97);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dateTimePicker4.RightToLeftLayout = true;
+            this.dateTimePicker4.Size = new System.Drawing.Size(200, 28);
+            this.dateTimePicker4.TabIndex = 7;
+            // 
             // FormAddCheck
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1231, 681);
+            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnUpdateCheck);
             this.Controls.Add(this.btnAddCheck);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.groupChecData);
@@ -593,7 +660,6 @@
         private PrintCheckDataSet1 printCheckDataSet1;
         private System.Windows.Forms.BindingSource currenceyBindingSource;
         private PrintCheckDataSet1TableAdapters.CurrenceyTableAdapter currenceyTableAdapter;
-        public System.Windows.Forms.TextBox txtCheckDate;
         private System.Windows.Forms.ComboBox txtBankName;
         private PrintCheckDataSet2 printCheckDataSet2;
         private System.Windows.Forms.BindingSource banksBindingSource;
@@ -610,8 +676,14 @@
         private System.Windows.Forms.GroupBox groupChecData;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAddCheck;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUpdateCheck;
         private System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.TextBox txtCheckID;
         public System.Windows.Forms.TextBox txtCheckNO;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
     }
 }
