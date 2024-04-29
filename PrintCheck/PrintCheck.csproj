@@ -89,6 +89,28 @@
     <None Include="PrintCheckDataSet4.xss">
       <DependentUpon>PrintCheckDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="PrintCheckDataSetAllChecks.xsc">
+      <DependentUpon>PrintCheckDataSetAllChecks.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSetAllChecks.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCheckDataSetAllChecks.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintCheckDataSetAllChecks.xss">
+      <DependentUpon>PrintCheckDataSetAllChecks.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSetCurrency.xsc">
+      <DependentUpon>PrintCheckDataSetCurrency.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSetCurrency.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCheckDataSetCurrency.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintCheckDataSetCurrency.xss">
+      <DependentUpon>PrintCheckDataSetCurrency.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -139,6 +161,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PrintCheckDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCheckDataSetAllChecks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCheckDataSetAllChecks.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCheckDataSetCurrency.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCheckDataSetCurrency.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

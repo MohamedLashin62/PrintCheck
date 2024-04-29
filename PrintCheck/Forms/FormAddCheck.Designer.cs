@@ -30,20 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvCheck = new System.Windows.Forms.DataGridView();
-            this.checkDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkNoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currenceyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bankNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.almustafidNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expensesNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.checkTypNamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.viewCheckBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.printCheckDataSet = new PrintCheck.PrintCheckDataSet();
-            this.view_CheckTableAdapter = new PrintCheck.PrintCheckDataSetTableAdapters.View_CheckTableAdapter();
             this.txtCheckID = new System.Windows.Forms.TextBox();
             this.txtChechAmount = new System.Windows.Forms.TextBox();
-            this.txtCheckELmoustavid = new System.Windows.Forms.TextBox();
+            this.txtAlmustavidNam = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,24 +42,23 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtCurrency = new System.Windows.Forms.ComboBox();
+            this.cmbCurrency = new System.Windows.Forms.ComboBox();
             this.currenceyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.printCheckDataSet1 = new PrintCheck.PrintCheckDataSet1();
-            this.currenceyTableAdapter = new PrintCheck.PrintCheckDataSet1TableAdapters.CurrenceyTableAdapter();
-            this.txtBankName = new System.Windows.Forms.ComboBox();
+            this.cmbBankName = new System.Windows.Forms.ComboBox();
             this.banksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.printCheckDataSet2 = new PrintCheck.PrintCheckDataSet2();
             this.banksTableAdapter = new PrintCheck.PrintCheckDataSet2TableAdapters.BanksTableAdapter();
-            this.txtExpnses = new System.Windows.Forms.ComboBox();
+            this.cmbExpnses = new System.Windows.Forms.ComboBox();
             this.expensesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.printCheckDataSet3 = new PrintCheck.PrintCheckDataSet3();
-            this.txtChekTyp = new System.Windows.Forms.ComboBox();
+            this.cmbChekTyp = new System.Windows.Forms.ComboBox();
             this.checkTypBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.printCheckDataSet4 = new PrintCheck.PrintCheckDataSet4();
             this.expensesTableAdapter = new PrintCheck.PrintCheckDataSet3TableAdapters.ExpensesTableAdapter();
             this.checkTypTableAdapter = new PrintCheck.PrintCheckDataSet4TableAdapters.CheckTypTableAdapter();
             this.pictCheck = new System.Windows.Forms.PictureBox();
             this.groupChecData = new System.Windows.Forms.GroupBox();
+            this.txtChekDate = new System.Windows.Forms.DateTimePicker();
             this.txtCheckNO = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -79,12 +68,24 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.printCheckDataSetCurrency = new PrintCheck.PrintCheckDataSetCurrency();
+            this.currenceyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.currenceyTableAdapter = new PrintCheck.PrintCheckDataSetCurrencyTableAdapters.CurrenceyTableAdapter();
+            this.printCheckDataSetAllChecks = new PrintCheck.PrintCheckDataSetAllChecks();
+            this.viewAddCheckBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.view_AddCheckTableAdapter = new PrintCheck.PrintCheckDataSetAllChecksTableAdapters.View_AddCheckTableAdapter();
+            this.checkIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.almustafidNamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewCheckBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currenceyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.banksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource)).BeginInit();
@@ -93,6 +94,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictCheck)).BeginInit();
             this.groupChecData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSetCurrency)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currenceyBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSetAllChecks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewAddCheckBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCheck
@@ -105,15 +110,16 @@
             this.dgvCheck.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dgvCheck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCheck.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.checkDateDataGridViewTextBoxColumn,
-            this.checkNoDataGridViewTextBoxColumn,
-            this.checkAmountDataGridViewTextBoxColumn,
-            this.currenceyNameDataGridViewTextBoxColumn,
-            this.bankNameDataGridViewTextBoxColumn,
-            this.almustafidNameDataGridViewTextBoxColumn,
-            this.expensesNameDataGridViewTextBoxColumn,
-            this.checkTypNamDataGridViewTextBoxColumn});
-            this.dgvCheck.DataSource = this.viewCheckBindingSource;
+            this.checkIDDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.almustafidNamDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.dgvCheck.DataSource = this.viewAddCheckBindingSource;
             this.dgvCheck.EnableHeadersVisualStyles = false;
             this.dgvCheck.GridColor = System.Drawing.Color.Red;
             this.dgvCheck.Location = new System.Drawing.Point(437, 445);
@@ -124,75 +130,9 @@
             this.dgvCheck.Size = new System.Drawing.Size(782, 209);
             this.dgvCheck.TabIndex = 0;
             // 
-            // checkDateDataGridViewTextBoxColumn
-            // 
-            this.checkDateDataGridViewTextBoxColumn.DataPropertyName = "CheckDate";
-            this.checkDateDataGridViewTextBoxColumn.HeaderText = "CheckDate";
-            this.checkDateDataGridViewTextBoxColumn.Name = "checkDateDataGridViewTextBoxColumn";
-            this.checkDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // checkNoDataGridViewTextBoxColumn
-            // 
-            this.checkNoDataGridViewTextBoxColumn.DataPropertyName = "CheckNo";
-            this.checkNoDataGridViewTextBoxColumn.HeaderText = "CheckNo";
-            this.checkNoDataGridViewTextBoxColumn.Name = "checkNoDataGridViewTextBoxColumn";
-            this.checkNoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // checkAmountDataGridViewTextBoxColumn
-            // 
-            this.checkAmountDataGridViewTextBoxColumn.DataPropertyName = "CheckAmount";
-            this.checkAmountDataGridViewTextBoxColumn.HeaderText = "CheckAmount";
-            this.checkAmountDataGridViewTextBoxColumn.Name = "checkAmountDataGridViewTextBoxColumn";
-            this.checkAmountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // currenceyNameDataGridViewTextBoxColumn
-            // 
-            this.currenceyNameDataGridViewTextBoxColumn.DataPropertyName = "CurrenceyName";
-            this.currenceyNameDataGridViewTextBoxColumn.HeaderText = "CurrenceyName";
-            this.currenceyNameDataGridViewTextBoxColumn.Name = "currenceyNameDataGridViewTextBoxColumn";
-            this.currenceyNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bankNameDataGridViewTextBoxColumn
-            // 
-            this.bankNameDataGridViewTextBoxColumn.DataPropertyName = "BankName";
-            this.bankNameDataGridViewTextBoxColumn.HeaderText = "BankName";
-            this.bankNameDataGridViewTextBoxColumn.Name = "bankNameDataGridViewTextBoxColumn";
-            this.bankNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // almustafidNameDataGridViewTextBoxColumn
-            // 
-            this.almustafidNameDataGridViewTextBoxColumn.DataPropertyName = "AlmustafidName";
-            this.almustafidNameDataGridViewTextBoxColumn.HeaderText = "AlmustafidName";
-            this.almustafidNameDataGridViewTextBoxColumn.Name = "almustafidNameDataGridViewTextBoxColumn";
-            this.almustafidNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // expensesNameDataGridViewTextBoxColumn
-            // 
-            this.expensesNameDataGridViewTextBoxColumn.DataPropertyName = "ExpensesName";
-            this.expensesNameDataGridViewTextBoxColumn.HeaderText = "ExpensesName";
-            this.expensesNameDataGridViewTextBoxColumn.Name = "expensesNameDataGridViewTextBoxColumn";
-            this.expensesNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // checkTypNamDataGridViewTextBoxColumn
-            // 
-            this.checkTypNamDataGridViewTextBoxColumn.DataPropertyName = "CheckTypNam";
-            this.checkTypNamDataGridViewTextBoxColumn.HeaderText = "CheckTypNam";
-            this.checkTypNamDataGridViewTextBoxColumn.Name = "checkTypNamDataGridViewTextBoxColumn";
-            this.checkTypNamDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // viewCheckBindingSource
             // 
             this.viewCheckBindingSource.DataMember = "View_Check";
-            this.viewCheckBindingSource.DataSource = this.printCheckDataSet;
-            // 
-            // printCheckDataSet
-            // 
-            this.printCheckDataSet.DataSetName = "PrintCheckDataSet";
-            this.printCheckDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // view_CheckTableAdapter
-            // 
-            this.view_CheckTableAdapter.ClearBeforeFill = true;
             // 
             // txtCheckID
             // 
@@ -210,30 +150,30 @@
             // txtChechAmount
             // 
             this.txtChechAmount.BackColor = System.Drawing.Color.White;
-            this.txtChechAmount.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.txtChechAmount.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.txtChechAmount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtChechAmount.Location = new System.Drawing.Point(42, 126);
             this.txtChechAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtChechAmount.Name = "txtChechAmount";
             this.txtChechAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtChechAmount.Size = new System.Drawing.Size(182, 26);
+            this.txtChechAmount.Size = new System.Drawing.Size(182, 28);
             this.txtChechAmount.TabIndex = 1;
-            this.txtChechAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtChechAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtChechAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChechAmount_KeyDown);
             // 
-            // txtCheckELmoustavid
+            // txtAlmustavidNam
             // 
-            this.txtCheckELmoustavid.BackColor = System.Drawing.Color.White;
-            this.txtCheckELmoustavid.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtCheckELmoustavid.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCheckELmoustavid.Location = new System.Drawing.Point(15, 153);
-            this.txtCheckELmoustavid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCheckELmoustavid.Name = "txtCheckELmoustavid";
-            this.txtCheckELmoustavid.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCheckELmoustavid.Size = new System.Drawing.Size(209, 26);
-            this.txtCheckELmoustavid.TabIndex = 1;
-            this.txtCheckELmoustavid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtCheckELmoustavid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCheckELmoustavid_KeyDown);
+            this.txtAlmustavidNam.BackColor = System.Drawing.Color.White;
+            this.txtAlmustavidNam.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.txtAlmustavidNam.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtAlmustavidNam.Location = new System.Drawing.Point(15, 153);
+            this.txtAlmustavidNam.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAlmustavidNam.Name = "txtAlmustavidNam";
+            this.txtAlmustavidNam.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtAlmustavidNam.Size = new System.Drawing.Size(209, 26);
+            this.txtAlmustavidNam.TabIndex = 1;
+            this.txtAlmustavidNam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtAlmustavidNam.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCheckELmoustavid_KeyDown);
             // 
             // label1
             // 
@@ -315,51 +255,41 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "نوع الشيك";
             // 
-            // txtCurrency
+            // cmbCurrency
             // 
-            this.txtCurrency.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtCurrency.DataSource = this.currenceyBindingSource;
-            this.txtCurrency.DisplayMember = "CurrenceyName";
-            this.txtCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtCurrency.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCurrency.FormattingEnabled = true;
-            this.txtCurrency.Location = new System.Drawing.Point(73, 180);
-            this.txtCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCurrency.Name = "txtCurrency";
-            this.txtCurrency.Size = new System.Drawing.Size(151, 30);
-            this.txtCurrency.TabIndex = 3;
-            this.txtCurrency.ValueMember = "CurrencyCod";
-            this.txtCurrency.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCurrency_KeyDown);
+            this.cmbCurrency.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmbCurrency.DataSource = this.currenceyBindingSource1;
+            this.cmbCurrency.DisplayMember = "CurrenceyName";
+            this.cmbCurrency.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.cmbCurrency.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cmbCurrency.FormattingEnabled = true;
+            this.cmbCurrency.Location = new System.Drawing.Point(73, 180);
+            this.cmbCurrency.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbCurrency.Name = "cmbCurrency";
+            this.cmbCurrency.Size = new System.Drawing.Size(151, 30);
+            this.cmbCurrency.TabIndex = 3;
+            this.cmbCurrency.ValueMember = "CurrencyCod";
+            this.cmbCurrency.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCurrency_KeyDown);
             // 
             // currenceyBindingSource
             // 
             this.currenceyBindingSource.DataMember = "Currencey";
-            this.currenceyBindingSource.DataSource = this.printCheckDataSet1;
             // 
-            // printCheckDataSet1
+            // cmbBankName
             // 
-            this.printCheckDataSet1.DataSetName = "PrintCheckDataSet1";
-            this.printCheckDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // currenceyTableAdapter
-            // 
-            this.currenceyTableAdapter.ClearBeforeFill = true;
-            // 
-            // txtBankName
-            // 
-            this.txtBankName.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtBankName.DataSource = this.banksBindingSource;
-            this.txtBankName.DisplayMember = "BankName";
-            this.txtBankName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtBankName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtBankName.FormattingEnabled = true;
-            this.txtBankName.Location = new System.Drawing.Point(15, 211);
-            this.txtBankName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtBankName.Name = "txtBankName";
-            this.txtBankName.Size = new System.Drawing.Size(208, 30);
-            this.txtBankName.TabIndex = 4;
-            this.txtBankName.ValueMember = "BankCod";
-            this.txtBankName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBankName_KeyDown);
+            this.cmbBankName.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmbBankName.DataSource = this.banksBindingSource;
+            this.cmbBankName.DisplayMember = "BankName";
+            this.cmbBankName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.cmbBankName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cmbBankName.FormattingEnabled = true;
+            this.cmbBankName.Location = new System.Drawing.Point(15, 211);
+            this.cmbBankName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbBankName.Name = "cmbBankName";
+            this.cmbBankName.Size = new System.Drawing.Size(208, 30);
+            this.cmbBankName.TabIndex = 4;
+            this.cmbBankName.ValueMember = "BankCod";
+            this.cmbBankName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBankName_KeyDown);
             // 
             // banksBindingSource
             // 
@@ -375,21 +305,21 @@
             // 
             this.banksTableAdapter.ClearBeforeFill = true;
             // 
-            // txtExpnses
+            // cmbExpnses
             // 
-            this.txtExpnses.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtExpnses.DataSource = this.expensesBindingSource;
-            this.txtExpnses.DisplayMember = "ExpensesName";
-            this.txtExpnses.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtExpnses.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtExpnses.FormattingEnabled = true;
-            this.txtExpnses.Location = new System.Drawing.Point(50, 242);
-            this.txtExpnses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtExpnses.Name = "txtExpnses";
-            this.txtExpnses.Size = new System.Drawing.Size(174, 30);
-            this.txtExpnses.TabIndex = 5;
-            this.txtExpnses.ValueMember = "ExpensesCod";
-            this.txtExpnses.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtExpnses_KeyDown);
+            this.cmbExpnses.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmbExpnses.DataSource = this.expensesBindingSource;
+            this.cmbExpnses.DisplayMember = "ExpensesName";
+            this.cmbExpnses.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.cmbExpnses.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cmbExpnses.FormattingEnabled = true;
+            this.cmbExpnses.Location = new System.Drawing.Point(50, 242);
+            this.cmbExpnses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbExpnses.Name = "cmbExpnses";
+            this.cmbExpnses.Size = new System.Drawing.Size(174, 30);
+            this.cmbExpnses.TabIndex = 5;
+            this.cmbExpnses.ValueMember = "ExpensesCod";
+            this.cmbExpnses.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtExpnses_KeyDown);
             // 
             // expensesBindingSource
             // 
@@ -401,22 +331,22 @@
             this.printCheckDataSet3.DataSetName = "PrintCheckDataSet3";
             this.printCheckDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // txtChekTyp
+            // cmbChekTyp
             // 
-            this.txtChekTyp.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.txtChekTyp.DataSource = this.checkTypBindingSource;
-            this.txtChekTyp.DisplayMember = "CheckTypNam";
-            this.txtChekTyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.txtChekTyp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtChekTyp.FormattingEnabled = true;
-            this.txtChekTyp.Location = new System.Drawing.Point(50, 273);
-            this.txtChekTyp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtChekTyp.MinimumSize = new System.Drawing.Size(174, 0);
-            this.txtChekTyp.Name = "txtChekTyp";
-            this.txtChekTyp.Size = new System.Drawing.Size(174, 30);
-            this.txtChekTyp.TabIndex = 6;
-            this.txtChekTyp.ValueMember = "CheckTypCod";
-            this.txtChekTyp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChekTyp_KeyDown);
+            this.cmbChekTyp.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cmbChekTyp.DataSource = this.checkTypBindingSource;
+            this.cmbChekTyp.DisplayMember = "CheckTypNam";
+            this.cmbChekTyp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.cmbChekTyp.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cmbChekTyp.FormattingEnabled = true;
+            this.cmbChekTyp.Location = new System.Drawing.Point(50, 273);
+            this.cmbChekTyp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbChekTyp.MinimumSize = new System.Drawing.Size(174, 0);
+            this.cmbChekTyp.Name = "cmbChekTyp";
+            this.cmbChekTyp.Size = new System.Drawing.Size(174, 30);
+            this.cmbChekTyp.TabIndex = 6;
+            this.cmbChekTyp.ValueMember = "CheckTypCod";
+            this.cmbChekTyp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtChekTyp_KeyDown);
             // 
             // checkTypBindingSource
             // 
@@ -450,21 +380,21 @@
             // groupChecData
             // 
             this.groupChecData.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.groupChecData.Controls.Add(this.dateTimePicker4);
+            this.groupChecData.Controls.Add(this.txtChekDate);
             this.groupChecData.Controls.Add(this.txtCheckNO);
             this.groupChecData.Controls.Add(this.txtCheckID);
             this.groupChecData.Controls.Add(this.label8);
-            this.groupChecData.Controls.Add(this.txtChekTyp);
+            this.groupChecData.Controls.Add(this.cmbChekTyp);
             this.groupChecData.Controls.Add(this.label7);
             this.groupChecData.Controls.Add(this.txtChechAmount);
             this.groupChecData.Controls.Add(this.label6);
-            this.groupChecData.Controls.Add(this.txtExpnses);
+            this.groupChecData.Controls.Add(this.cmbExpnses);
             this.groupChecData.Controls.Add(this.label5);
-            this.groupChecData.Controls.Add(this.txtCheckELmoustavid);
+            this.groupChecData.Controls.Add(this.txtAlmustavidNam);
             this.groupChecData.Controls.Add(this.label4);
-            this.groupChecData.Controls.Add(this.txtBankName);
+            this.groupChecData.Controls.Add(this.cmbBankName);
             this.groupChecData.Controls.Add(this.label3);
-            this.groupChecData.Controls.Add(this.txtCurrency);
+            this.groupChecData.Controls.Add(this.cmbCurrency);
             this.groupChecData.Controls.Add(this.label10);
             this.groupChecData.Controls.Add(this.label2);
             this.groupChecData.Controls.Add(this.label1);
@@ -479,6 +409,18 @@
             this.groupChecData.TabIndex = 8;
             this.groupChecData.TabStop = false;
             this.groupChecData.Text = "بيانات الشيك";
+            // 
+            // txtChekDate
+            // 
+            this.txtChekDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.txtChekDate.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.txtChekDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtChekDate.Location = new System.Drawing.Point(24, 97);
+            this.txtChekDate.Name = "txtChekDate";
+            this.txtChekDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtChekDate.RightToLeftLayout = true;
+            this.txtChekDate.Size = new System.Drawing.Size(200, 28);
+            this.txtChekDate.TabIndex = 7;
             // 
             // txtCheckNO
             // 
@@ -554,6 +496,7 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "حفظ";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dateTimePicker1
             // 
@@ -577,17 +520,96 @@
             this.dateTimePicker3.Size = new System.Drawing.Size(200, 19);
             this.dateTimePicker3.TabIndex = 13;
             // 
-            // dateTimePicker4
+            // printCheckDataSetCurrency
             // 
-            this.dateTimePicker4.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(24, 97);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dateTimePicker4.RightToLeftLayout = true;
-            this.dateTimePicker4.Size = new System.Drawing.Size(200, 28);
-            this.dateTimePicker4.TabIndex = 7;
+            this.printCheckDataSetCurrency.DataSetName = "PrintCheckDataSetCurrency";
+            this.printCheckDataSetCurrency.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // currenceyBindingSource1
+            // 
+            this.currenceyBindingSource1.DataMember = "Currencey";
+            this.currenceyBindingSource1.DataSource = this.printCheckDataSetCurrency;
+            // 
+            // currenceyTableAdapter
+            // 
+            this.currenceyTableAdapter.ClearBeforeFill = true;
+            // 
+            // printCheckDataSetAllChecks
+            // 
+            this.printCheckDataSetAllChecks.DataSetName = "PrintCheckDataSetAllChecks";
+            this.printCheckDataSetAllChecks.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewAddCheckBindingSource
+            // 
+            this.viewAddCheckBindingSource.DataMember = "View_AddCheck";
+            this.viewAddCheckBindingSource.DataSource = this.printCheckDataSetAllChecks;
+            // 
+            // view_AddCheckTableAdapter
+            // 
+            this.view_AddCheckTableAdapter.ClearBeforeFill = true;
+            // 
+            // checkIDDataGridViewTextBoxColumn
+            // 
+            this.checkIDDataGridViewTextBoxColumn.DataPropertyName = "CheckID";
+            this.checkIDDataGridViewTextBoxColumn.HeaderText = "CheckID";
+            this.checkIDDataGridViewTextBoxColumn.Name = "checkIDDataGridViewTextBoxColumn";
+            this.checkIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "CheckNo";
+            this.dataGridViewTextBoxColumn1.HeaderText = "CheckNo";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CheckDate";
+            this.dataGridViewTextBoxColumn2.HeaderText = "CheckDate";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "CheckAmount";
+            this.dataGridViewTextBoxColumn3.HeaderText = "CheckAmount";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // almustafidNamDataGridViewTextBoxColumn
+            // 
+            this.almustafidNamDataGridViewTextBoxColumn.DataPropertyName = "AlmustafidNam";
+            this.almustafidNamDataGridViewTextBoxColumn.HeaderText = "AlmustafidNam";
+            this.almustafidNamDataGridViewTextBoxColumn.Name = "almustafidNamDataGridViewTextBoxColumn";
+            this.almustafidNamDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "CurrenceyName";
+            this.dataGridViewTextBoxColumn4.HeaderText = "CurrenceyName";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "BankName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "BankName";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "ExpensesName";
+            this.dataGridViewTextBoxColumn6.HeaderText = "ExpensesName";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "CheckTypNam";
+            this.dataGridViewTextBoxColumn7.HeaderText = "CheckTypNam";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // FormAddCheck
             // 
@@ -616,9 +638,7 @@
             this.Load += new System.EventHandler(this.AddCheck_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewCheckBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.currenceyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.banksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.expensesBindingSource)).EndInit();
@@ -628,15 +648,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictCheck)).EndInit();
             this.groupChecData.ResumeLayout(false);
             this.groupChecData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSetCurrency)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currenceyBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSetAllChecks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewAddCheckBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private PrintCheckDataSet printCheckDataSet;
+        //private PrintCheckDataSet printCheckDataSet;
         private System.Windows.Forms.BindingSource viewCheckBindingSource;
-        private PrintCheckDataSetTableAdapters.View_CheckTableAdapter view_CheckTableAdapter;
+        //private PrintCheckDataSetTableAdapters.View_CheckTableAdapter view_CheckTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn checkDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn checkNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn checkAmountDataGridViewTextBoxColumn;
@@ -647,7 +671,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn checkTypNamDataGridViewTextBoxColumn;
         public System.Windows.Forms.DataGridView dgvCheck;
         private System.Windows.Forms.TextBox txtChechAmount;
-        private System.Windows.Forms.TextBox txtCheckELmoustavid;
+        private System.Windows.Forms.TextBox txtAlmustavidNam;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -656,16 +680,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox txtCurrency;
-        private PrintCheckDataSet1 printCheckDataSet1;
+        private System.Windows.Forms.ComboBox cmbCurrency;
+        //private PrintCheckDataSet1 printCheckDataSet1;
         private System.Windows.Forms.BindingSource currenceyBindingSource;
-        private PrintCheckDataSet1TableAdapters.CurrenceyTableAdapter currenceyTableAdapter;
-        private System.Windows.Forms.ComboBox txtBankName;
+        //private PrintCheckDataSet1TableAdapters.CurrenceyTableAdapter currenceyTableAdapter;
+        private System.Windows.Forms.ComboBox cmbBankName;
         private PrintCheckDataSet2 printCheckDataSet2;
         private System.Windows.Forms.BindingSource banksBindingSource;
         private PrintCheckDataSet2TableAdapters.BanksTableAdapter banksTableAdapter;
-        private System.Windows.Forms.ComboBox txtExpnses;
-        private System.Windows.Forms.ComboBox txtChekTyp;
+        private System.Windows.Forms.ComboBox cmbExpnses;
+        private System.Windows.Forms.ComboBox cmbChekTyp;
         private PrintCheckDataSet3 printCheckDataSet3;
         private System.Windows.Forms.BindingSource expensesBindingSource;
         private PrintCheckDataSet3TableAdapters.ExpensesTableAdapter expensesTableAdapter;
@@ -682,8 +706,23 @@
         public System.Windows.Forms.TextBox txtCheckNO;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        public System.Windows.Forms.DateTimePicker dateTimePicker4;
+        public System.Windows.Forms.DateTimePicker txtChekDate;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private PrintCheckDataSetCurrency printCheckDataSetCurrency;
+        private System.Windows.Forms.BindingSource currenceyBindingSource1;
+        private PrintCheckDataSetCurrencyTableAdapters.CurrenceyTableAdapter currenceyTableAdapter;
+        private PrintCheckDataSetAllChecks printCheckDataSetAllChecks;
+        private System.Windows.Forms.BindingSource viewAddCheckBindingSource;
+        private PrintCheckDataSetAllChecksTableAdapters.View_AddCheckTableAdapter view_AddCheckTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn checkIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn almustafidNamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
     }
 }

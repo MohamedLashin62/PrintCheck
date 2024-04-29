@@ -10,7 +10,11 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using static PrintCheck.PrintCheckDataSet3;
+using static PrintCheck.PrintCheckDataSet4;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PrintCheck.Forms
 {
@@ -20,14 +24,16 @@ namespace PrintCheck.Forms
         public FormAddCheck()
         {
             InitializeComponent();
-            txtCheckNO.Clear();            
+            txtCheckNO.Clear();
             txtChechAmount.Clear();
             txtCheckNO.Focus();
         }
-        
-
         private void AddCheck_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'printCheckDataSetAllChecks.View_AddCheck' table. You can move, or remove it, as needed.
+            this.view_AddCheckTableAdapter.Fill(this.printCheckDataSetAllChecks.View_AddCheck);
+            // TODO: This line of code loads data into the 'printCheckDataSetCurrency.Currencey' table. You can move, or remove it, as needed.
+            this.currenceyTableAdapter.Fill(this.printCheckDataSetCurrency.Currencey);
             // TODO: This line of code loads data into the 'printCheckDataSet4.CheckTyp' table. You can move, or remove it, as needed.
             this.checkTypTableAdapter.Fill(this.printCheckDataSet4.CheckTyp);
             // TODO: This line of code loads data into the 'printCheckDataSet3.Expenses' table. You can move, or remove it, as needed.
@@ -35,18 +41,16 @@ namespace PrintCheck.Forms
             // TODO: This line of code loads data into the 'printCheckDataSet2.Banks' table. You can move, or remove it, as needed.
             this.banksTableAdapter.Fill(this.printCheckDataSet2.Banks);
             // TODO: This line of code loads data into the 'printCheckDataSet1.Currencey' table. You can move, or remove it, as needed.
-            this.currenceyTableAdapter.Fill(this.printCheckDataSet1.Currencey);
+         //   this.currenceyTableAdapter.Fill(this.printCheckDataSet1.Currencey);
             // TODO: This line of code loads data into the 'printCheckDataSet.View_Check' table. You can move, or remove it, as needed.
-            this.view_CheckTableAdapter.Fill(this.printCheckDataSet.View_Check);
-
+          //  this.view_CheckTableAdapter.Fill(this.printCheckDataSet.View_Check);
         }
-
         private void btnAddCheck_Click(object sender, EventArgs e)
         {
             groupChecData.Enabled = true;
             txtCheckNO.Focus();
             btnSave.Enabled = true;
-            btnUpdateCheck.Enabled = false; 
+            btnUpdateCheck.Enabled = false;
             GenericClass generic = new GenericClass();
             generic.MaxIDPublic("MaxCheckIDSP");
             int id = generic.MaxIDPublic("MaxCheckIDSP") + 1;
@@ -64,42 +68,37 @@ namespace PrintCheck.Forms
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txtCheckELmoustavid.Select();
+                txtAlmustavidNam.Select();
             }
         }
-
         private void txtCheckELmoustavid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txtCurrency.Select();
+                cmbCurrency.Select();
             }
         }
-
         private void txtCurrency_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txtBankName.Select();
+                cmbBankName.Select();
             }
         }
-
         private void txtBankName_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txtExpnses.Select();
+                cmbExpnses.Select();
             }
         }
-
         private void txtExpnses_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-               txtChekTyp.Select();
+                cmbChekTyp.Select();
             }
         }
-
         private void txtChekTyp_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -107,8 +106,32 @@ namespace PrintCheck.Forms
                 btnSave.PerformClick();
             }
         }
+        public void btnSave_Click(object sender, EventArgs e)
+        {
+            GenericClass generic = new GenericClass();
+            generic.MaxIDPublic("MaxCheckIDSP");
+            int id = generic.MaxIDPublic("MaxCheckIDSP") + 1;
+            AddCheck Add = new AddCheck();           
+            var checkNO = !string.IsNullOrEmpty(txtCheckNO.Text) ? Convert.ToInt32(txtCheckNO.Text) : 0;
+            var CheckDate = !string.IsNullOrEmpty(txtChekDate.Text) ? Convert.ToDateTime(txtChekDate.Text) : DateTime.Now;
+            var checkAmount = !string.IsNullOrEmpty(txtChechAmount.Text) ? Convert.ToInt32(txtChechAmount.Text) : 0;
+            var AlmustafidNam = txtAlmustavidNam.Text;
+            var CurrencyCodSelected=cmbCurrency.SelectedValue;
+            var CurrencyCod = !string.IsNullOrEmpty(CurrencyCodSelected.ToString()) ? Convert.ToInt32(cmbCurrency.Text) : 0;
+            var bankCodeSelected = cmbBankName.SelectedValue;
+            var BankCod = !string.IsNullOrEmpty(bankCodeSelected.ToString()) ? Convert.ToInt32(bankCodeSelected) : 0;
+            var ExpensesCodSelected = cmbExpnses.SelectedValue;
+            var ExpensesCod = !string.IsNullOrEmpty(ExpensesCodSelected.ToString()) ? Convert.ToInt32(ExpensesCodSelected) : 0;
+            var CheckTypCodSelected = cmbChekTyp.SelectedValue;
+            var CheckTypCod = !string.IsNullOrEmpty(CheckTypCodSelected.ToString()) ? Convert.ToInt32(CheckTypCodSelected) : 0;            
+            Add.InsertIntoCheckMovement(
+            id, checkNO, CheckDate, checkAmount,AlmustafidNam,
+            CurrencyCod, BankCod, ExpensesCod, CheckTypCod);
+        }   
     }
-        }
+   }
+   
+     
            
         
       

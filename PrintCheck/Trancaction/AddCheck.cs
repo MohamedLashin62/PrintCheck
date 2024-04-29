@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static PrintCheck.PrintCheckDataSet1;
 
 namespace PrintCheck.Trancaction
 {
@@ -13,8 +14,8 @@ namespace PrintCheck.Trancaction
 
         public SqlCommand cmd;
         public DataTable dtAddCheck=new DataTable();
-        public void InsrtCheck(int CheckID,int CheckNo,DateTime CheckDate,decimal CheckAmount,
-            int BankCod,int CurrenceyCod,int AlmustafidCod,int ExpensesCod,int CheckTypCod)
+       public void InsertIntoCheckMovement(int CheckID,int CheckNo,DateTime CheckDate,decimal CheckAmount,
+            string AlmustafidNam,int CurrenceyCod, int BankCod,int ExpensesCod,int CheckTypCod)
         {
             cmd = new SqlCommand();
             {
@@ -26,13 +27,13 @@ namespace PrintCheck.Trancaction
                 cmd.Parameters.Add("@CheckNo",SqlDbType.Int).Value = CheckNo;
                 cmd.Parameters.Add("@CheckDate",SqlDbType.Date).Value = CheckDate;
                 cmd.Parameters.Add("@CheckAmount",SqlDbType.Decimal).Value = CheckAmount;
-                cmd.Parameters.Add("@BankCod",SqlDbType.Int).Value=BankCod;
-                cmd.Parameters.Add("@CurrenceyCod",SqlDbType.Int).Value=CurrenceyCod;
-                cmd.Parameters.Add("@AlmustafidCod", SqlDbType.Int).Value = AlmustafidCod;
-                cmd.Parameters.Add("@ExpensesCod",SqlDbType.Int).Value = ExpensesCod;
-                cmd.Parameters.Add("@CheckTypCod",SqlDbType.Int).Value = CurrenceyCod;
+                cmd.Parameters.Add("@AlmustafidName",SqlDbType.NVarChar,50).Value = AlmustafidNam;
+                cmd.Parameters.Add("@CurrenceyCod", SqlDbType.Int).Value = CurrenceyCod;
+                cmd.Parameters.Add("@BankCod", SqlDbType.Int).Value = BankCod;
+                cmd.Parameters.Add("@ExpensesCod", SqlDbType.Int).Value = ExpensesCod;
+                cmd.Parameters.Add("@CheckTypCod", SqlDbType.Int).Value = CheckTypCod;
                 GenralConnection.con.Open();
-                cmd.BeginExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 GenralConnection.con.Close();
             }
         }
