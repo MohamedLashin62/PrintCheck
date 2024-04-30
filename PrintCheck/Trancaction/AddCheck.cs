@@ -15,7 +15,7 @@ namespace PrintCheck.Trancaction
         public SqlCommand cmd;
         public DataTable dtAddCheck=new DataTable();
        public void InsertIntoCheckMovement(int CheckID,int CheckNo,DateTime CheckDate,decimal CheckAmount,
-            string AlmustafidNam,int CurrenceyCod, int BankCod,int ExpensesCod,int CheckTypCod)
+            string AlmustafidNam,int CurrenceyCod, int BankCod,int ExpensesCod,int CheckTypCod,string Manger)
         {
             cmd = new SqlCommand();
             {
@@ -32,6 +32,7 @@ namespace PrintCheck.Trancaction
                 cmd.Parameters.Add("@BankCod", SqlDbType.Int).Value = BankCod;
                 cmd.Parameters.Add("@ExpensesCod", SqlDbType.Int).Value = ExpensesCod;
                 cmd.Parameters.Add("@CheckTypCod", SqlDbType.Int).Value = CheckTypCod;
+                cmd.Parameters.Add("@Manger", SqlDbType.NVarChar, 50).Value = Manger;
                 GenralConnection.con.Open();
                 cmd.ExecuteNonQuery();
                 GenralConnection.con.Close();

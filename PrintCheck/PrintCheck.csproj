@@ -111,6 +111,17 @@
     <None Include="PrintCheckDataSetCurrency.xss">
       <DependentUpon>PrintCheckDataSetCurrency.xsd</DependentUpon>
     </None>
+    <None Include="PrintCheckDataSetDgvCheck.xsc">
+      <DependentUpon>PrintCheckDataSetDgvCheck.xsd</DependentUpon>
+    </None>
+    <None Include="PrintCheckDataSetDgvCheck.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintCheckDataSetDgvCheck.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrintCheckDataSetDgvCheck.xss">
+      <DependentUpon>PrintCheckDataSetDgvCheck.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -171,6 +182,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PrintCheckDataSetCurrency.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCheckDataSetDgvCheck.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCheckDataSetDgvCheck.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
