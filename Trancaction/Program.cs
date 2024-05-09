@@ -17,7 +17,7 @@ namespace PrintCheck.Trancaction
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new FormPrintCheck());
+                Application.Run(new FormAddCheck());
             }
              
 

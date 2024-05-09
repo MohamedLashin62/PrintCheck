@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +15,8 @@ namespace PrintCheck.Trancaction
 
         public SqlCommand cmd;
         public DataTable dtAddCheck=new DataTable();
-       public void InsertIntoCheckMovement(int CheckID,String CheckNo,DateTime CheckDate,decimal CheckAmount,
-            string AlmustafidNam,int CurrenceyCod, int BankCod,int ExpensesCod,int CheckTypCod,string Manger)
+        public void InsertIntoCheckMovement(int CheckID,String CheckNo,DateTime CheckDate,decimal CheckAmount,
+            string AlmustafidNam,int CurrenceyCod, int BankCod,int ExpensesCod,int CheckTypCod,string Manger,Image PHotoCheck)
         {
             cmd = new SqlCommand();
             {
@@ -33,6 +34,7 @@ namespace PrintCheck.Trancaction
                 cmd.Parameters.Add("@ExpensesCod", SqlDbType.Int).Value = ExpensesCod;
                 cmd.Parameters.Add("@CheckTypCod", SqlDbType.Int).Value = CheckTypCod;
                 cmd.Parameters.Add("@Manger", SqlDbType.NVarChar, 50).Value = Manger;
+                cmd.Parameters.Add("@PHotoCheck", SqlDbType.Image).Value = PHotoCheck;
                 GenralConnection.con.Open();
                 cmd.ExecuteNonQuery();
                 GenralConnection.con.Close();

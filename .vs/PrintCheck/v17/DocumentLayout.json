@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|c:\\users\\lashin\\desktop\\printcheck\\trancaction\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|solutionrelative:trancaction\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|c:\\users\\lashin\\desktop\\printcheck\\forms\\formaddcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|solutionrelative:forms\\formaddcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|c:\\users\\lashin\\desktop\\printcheck\\forms\\formprintcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|solutionrelative:forms\\formprintcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|c:\\users\\lashin\\desktop\\printcheck\\reports\\reportaddcheck.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|solutionrelative:reports\\reportaddcheck.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|c:\\users\\lashin\\desktop\\printcheck\\forms\\formprintcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|solutionrelative:forms\\formprintcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|c:\\users\\lashin\\desktop\\printcheck\\forms\\formaddcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|solutionrelative:forms\\formaddcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|c:\\users\\lashin\\desktop\\printcheck\\trancaction\\addcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24DFF0AB-277E-4E8A-BD67-F41259301CB3}|PrintCheck.csproj|solutionrelative:trancaction\\addcheck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,41 +74,53 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportAddCheck.rdlc [Design]",
+              "DocumentMoniker": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Reports\\ReportAddCheck.rdlc",
+              "RelativeDocumentMoniker": "Reports\\ReportAddCheck.rdlc",
+              "ToolTip": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Reports\\ReportAddCheck.rdlc [Design]",
+              "RelativeToolTip": "Reports\\ReportAddCheck.rdlc [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2024-05-09T14:48:29.201Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Trancaction\\Program.cs",
-              "RelativeDocumentMoniker": "Trancaction\\Program.cs",
-              "ToolTip": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Trancaction\\Program.cs",
-              "RelativeToolTip": "Trancaction\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAyAAAA",
+              "Title": "FormAddCheck.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Forms\\FormAddCheck.cs",
+              "RelativeDocumentMoniker": "Forms\\FormAddCheck.cs",
+              "ToolTip": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Forms\\FormAddCheck.cs [Design]",
+              "RelativeToolTip": "Forms\\FormAddCheck.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T01:40:29.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-09T12:47:35.97Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormPrintCheck.cs",
-              "DocumentMoniker": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Forms\\FormPrintCheck.cs",
-              "RelativeDocumentMoniker": "Forms\\FormPrintCheck.cs",
-              "ToolTip": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Forms\\FormPrintCheck.cs",
-              "RelativeToolTip": "Forms\\FormPrintCheck.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAMwBUAAAAMAAAA",
+              "Title": "FormAddCheck.cs",
+              "DocumentMoniker": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Forms\\FormAddCheck.cs",
+              "RelativeDocumentMoniker": "Forms\\FormAddCheck.cs",
+              "ToolTip": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Forms\\FormAddCheck.cs",
+              "RelativeToolTip": "Forms\\FormAddCheck.cs",
+              "ViewState": "AQIAALUAAAAAAAAAAAAMwMMAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T01:37:38.983Z",
+              "WhenOpened": "2024-05-09T12:32:43.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormPrintCheck.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Forms\\FormPrintCheck.cs",
-              "RelativeDocumentMoniker": "Forms\\FormPrintCheck.cs",
-              "ToolTip": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Forms\\FormPrintCheck.cs [Design]",
-              "RelativeToolTip": "Forms\\FormPrintCheck.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "AddCheck.cs",
+              "DocumentMoniker": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Trancaction\\AddCheck.cs",
+              "RelativeDocumentMoniker": "Trancaction\\AddCheck.cs",
+              "ToolTip": "C:\\Users\\Lashin\\Desktop\\PrintCheck\\Trancaction\\AddCheck.cs",
+              "RelativeToolTip": "Trancaction\\AddCheck.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAABIAAAByAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-09T01:35:09.202Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-09T12:24:21.193Z",
+              "EditorCaption": ""
             }
           ]
         }

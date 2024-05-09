@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -116,6 +117,10 @@ namespace PrintCheck.Forms
 
         public void btnSave_Click(object sender, EventArgs e)
         {
+            MemoryStream ms = new MemoryStream();
+            pictureCheck.Image.Save(ms,pictureCheck.Image.RawFormat);
+            byte[] data = ms.ToArray();
+                
             GenericClass generic = new GenericClass();
             generic.MaxIDPublic("MaxCheckIDSP");
             int id = generic.MaxIDPublic("MaxCheckIDSP") + 1;
@@ -133,10 +138,11 @@ namespace PrintCheck.Forms
             var ExpensesCod = !string.IsNullOrEmpty(ExpensesCodSelected.ToString()) ? Convert.ToInt32(ExpensesCodSelected) : 0;
             var CheckTypCodSelected = cmbChekTyp.SelectedValue;
             var CheckTypCod = !string.IsNullOrEmpty(CheckTypCodSelected.ToString()) ? Convert.ToInt32(CheckTypCodSelected) : 0;
-            var Manger =txtManger.Text;
+            var Manger = txtManger.Text;            
+            var PHotoCheck= pictureCheck.Image;
             Add.InsertIntoCheckMovement(
             id, checkNO, CheckDate, checkAmount,AlmustafidNam,
-            CurrencyCod, BankCod, ExpensesCod, CheckTypCod,Manger);
+            CurrencyCod, BankCod, ExpensesCod, CheckTypCod,Manger,PHotoCheck);
 
             MessageBox.Show("تم تسجيل بيانات الشيك بنجاح");
             btnSave.Enabled = false;
@@ -172,6 +178,24 @@ namespace PrintCheck.Forms
             if (e.KeyCode==Keys.Enter)
             {
                 cmbCurrency.Select();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image file(*.jpg;*.jpeg;*.gif;*.bmp)|*.jpg;*.jpeg;*.gif;*.bmp";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pictureCheck.Image = new Bitmap(ofd.FileName);
+                txtPHotoCheck.Text = ofd.FileName;
+            }
+            
+            {
+
+            }
+                {
+
             }
         }
     }
