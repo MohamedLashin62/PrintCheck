@@ -10,15 +10,17 @@ using System.Windows.Forms;
 
 namespace PrintCheck.Forms
 {
-    public partial class FormPrintChech : Form
+    public partial class FormPrintCheck : Form
     {
-        public FormPrintChech()
+        public FormPrintCheck()
         {
             InitializeComponent();
         }
 
-        private void FormPrintChech_Load(object sender, EventArgs e)
+        private void FormPrintCheck_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'printCheckDataSetPrint.View_AddCheck' table. You can move, or remove it, as needed.
+            this.view_AddCheckTableAdapter.Fill(this.printCheckDataSetPrint.View_AddCheck);
 
             this.reportViewer1.RefreshReport();
         }
