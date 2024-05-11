@@ -136,3 +136,4 @@ C:\Users\Lashin\Desktop\PrintCheck\bin\Debug\pt\Microsoft.ReportViewer.WinForms.
 C:\Users\Lashin\Desktop\PrintCheck\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Lashin\Desktop\PrintCheck\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Lashin\Desktop\PrintCheck\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\Lashin\Desktop\PrintCheck\obj\Debug\PrintCheck.Forms.formBanks.resources

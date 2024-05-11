@@ -15,7 +15,7 @@ namespace PrintCheck.Trancaction
 
         public SqlCommand cmd;
         public DataTable dtAddCheck=new DataTable();
-        public void InsertIntoCheckMovement(int CheckID,String CheckNo,DateTime CheckDate,decimal CheckAmount,
+        public void InsertIntoCheckMovement(int CheckID,string CheckNo,DateTime CheckDate,decimal CheckAmount,
             string AlmustafidNam,int CurrenceyCod, int BankCod,int ExpensesCod,int CheckTypCod,string Manger,Image PHotoCheck)
         {
             cmd = new SqlCommand();

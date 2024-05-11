@@ -194,9 +194,20 @@ namespace PrintCheck.Forms
             {
 
             }
-                {
+            {
 
             }
+        }
+        private void btnBanks_Click(object sender, EventArgs e)
+        {
+            formBanks banks = new formBanks();
+            banks.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormPrintCheck printCheck = new FormPrintCheck();
+            printCheck.ShowDialog();
         }
     }
 
