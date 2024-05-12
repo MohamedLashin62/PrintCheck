@@ -15,6 +15,7 @@ using static PrintCheck.PrintCheckDataSet3;
 using static PrintCheck.PrintCheckDataSet4;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Image = System.Drawing.Image;
 
 namespace PrintCheck.Forms
 {
@@ -108,22 +109,32 @@ namespace PrintCheck.Forms
         }
         private void txtManger_KeyDown_1(object sender, KeyEventArgs e)
         {
-            btnSave.Enabled = true;
+            
             if (e.KeyCode == Keys.Enter)
             {
-                btnSave.PerformClick();
+                btnInsertPic.Select();
             }
         }
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image file(*.jpg;*.jpeg;*.gif;*.bmp)|*.jpg;*.jpeg;*.gif;*.bmp";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pictureCheck.Image = Image.FromFile(ofd.FileName);
+                txtPHotoCheck.Text = ofd.FileName;
+            }  
+        }
         public void btnSave_Click(object sender, EventArgs e)
         {
             MemoryStream ms = new MemoryStream();
             pictureCheck.Image.Save(ms,pictureCheck.Image.RawFormat);
-            byte[] data = ms.ToArray();
+            byte[] img = ms.ToArray();
                 
             GenericClass generic = new GenericClass();
             generic.MaxIDPublic("MaxCheckIDSP");
             int id = generic.MaxIDPublic("MaxCheckIDSP") + 1;
+
             AddCheck Add = new AddCheck();
             var checkNO = txtCheckNO.Text;
             var CheckDate = !string.IsNullOrEmpty(txtChekDate.Text) ? Convert.ToDateTime(txtChekDate.Text) : DateTime.Now;
@@ -139,12 +150,13 @@ namespace PrintCheck.Forms
             var CheckTypCodSelected = cmbChekTyp.SelectedValue;
             var CheckTypCod = !string.IsNullOrEmpty(CheckTypCodSelected.ToString()) ? Convert.ToInt32(CheckTypCodSelected) : 0;
             var Manger = txtManger.Text;            
-            var PHotoCheck= pictureCheck.Image;
+            
             Add.InsertIntoCheckMovement(
             id, checkNO, CheckDate, checkAmount,AlmustafidNam,
-            CurrencyCod, BankCod, ExpensesCod, CheckTypCod,Manger,PHotoCheck);
+            CurrencyCod, BankCod, ExpensesCod, CheckTypCod,Manger,img);
 
             MessageBox.Show("تم تسجيل بيانات الشيك بنجاح");
+
             btnSave.Enabled = false;
             btnAddCheck.PerformClick();
             txtCheckNO.Clear();
@@ -181,23 +193,7 @@ namespace PrintCheck.Forms
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image file(*.jpg;*.jpeg;*.gif;*.bmp)|*.jpg;*.jpeg;*.gif;*.bmp";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                pictureCheck.Image = new Bitmap(ofd.FileName);
-                txtPHotoCheck.Text = ofd.FileName;
-            }
-            
-            {
-
-            }
-            {
-
-            }
-        }
+       
         private void btnBanks_Click(object sender, EventArgs e)
         {
             formBanks banks = new formBanks();
@@ -208,6 +204,11 @@ namespace PrintCheck.Forms
         {
             FormPrintCheck printCheck = new FormPrintCheck();
             printCheck.ShowDialog();
+        }
+
+        private void txtPHotoCheck_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

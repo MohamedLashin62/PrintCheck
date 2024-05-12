@@ -74,7 +74,7 @@
             this.checkTypTableAdapter = new PrintCheck.PrintCheckDataSet4TableAdapters.CheckTypTableAdapter();
             this.groupChecData = new System.Windows.Forms.GroupBox();
             this.txtPHotoCheck = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInsertPic = new System.Windows.Forms.Button();
             this.cmbAlmustafid = new System.Windows.Forms.ComboBox();
             this.almustavidBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.printCheckDataSetAlmustafid = new PrintCheck.PrintCheckDataSetAlmustafid();
@@ -102,6 +102,7 @@
             this.pictureCheck = new System.Windows.Forms.PictureBox();
             this.btnBanks = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewAddCheckBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.printCheckDataSetDgvCheck)).BeginInit();
@@ -495,7 +496,7 @@
             // 
             this.groupChecData.BackColor = System.Drawing.Color.DarkTurquoise;
             this.groupChecData.Controls.Add(this.txtPHotoCheck);
-            this.groupChecData.Controls.Add(this.button1);
+            this.groupChecData.Controls.Add(this.btnInsertPic);
             this.groupChecData.Controls.Add(this.cmbAlmustafid);
             this.groupChecData.Controls.Add(this.txtChekDate);
             this.groupChecData.Controls.Add(this.txtCheckNO);
@@ -534,17 +535,18 @@
             this.txtPHotoCheck.Name = "txtPHotoCheck";
             this.txtPHotoCheck.Size = new System.Drawing.Size(149, 43);
             this.txtPHotoCheck.TabIndex = 11;
+            this.txtPHotoCheck.TextChanged += new System.EventHandler(this.txtPHotoCheck_TextChanged);
             // 
-            // button1
+            // btnInsertPic
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(161, 311);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 43);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "صورة الشيك";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnInsertPic.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            this.btnInsertPic.Location = new System.Drawing.Point(161, 311);
+            this.btnInsertPic.Name = "btnInsertPic";
+            this.btnInsertPic.Size = new System.Drawing.Size(187, 43);
+            this.btnInsertPic.TabIndex = 10;
+            this.btnInsertPic.Text = "صورة الشيك";
+            this.btnInsertPic.UseVisualStyleBackColor = true;
+            this.btnInsertPic.Click += new System.EventHandler(this.button1_Click);
             // 
             // cmbAlmustafid
             // 
@@ -672,7 +674,6 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.Blue;
-            this.btnSave.Enabled = false;
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSave.Location = new System.Drawing.Point(238, 566);
@@ -740,7 +741,7 @@
             this.fillByToolStripButton});
             this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
             this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(1475, 27);
+            this.fillByToolStrip.Size = new System.Drawing.Size(1475, 31);
             this.fillByToolStrip.TabIndex = 15;
             this.fillByToolStrip.Text = "fillByToolStrip";
             // 
@@ -808,6 +809,10 @@
             this.button3.Text = "طباعة شيك";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "ofd";
             // 
             // FormAddCheck
             // 
@@ -949,9 +954,10 @@
         private System.Windows.Forms.Button btnDeletCheck;
         private System.Windows.Forms.Button btnPrintCheck;
         private System.Windows.Forms.PictureBox pictureCheck;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInsertPic;
         private System.Windows.Forms.TextBox txtPHotoCheck;
         private System.Windows.Forms.Button btnBanks;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

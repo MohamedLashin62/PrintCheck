@@ -35,12 +35,13 @@
             this.txtBankCod = new System.Windows.Forms.TextBox();
             this.txtBankName = new System.Windows.Forms.TextBox();
             this.txtChekName = new System.Windows.Forms.TextBox();
-            this.pictCheck = new System.Windows.Forms.PictureBox();
+            this.boxCheckImag = new System.Windows.Forms.PictureBox();
             this.btnAddChek = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnInsPicCheck = new System.Windows.Forms.Button();
             this.txtPicCheck = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictCheck)).BeginInit();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.boxCheckImag)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -118,15 +119,16 @@
             this.txtChekName.TabIndex = 2;
             this.txtChekName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictCheck
+            // boxCheckImag
             // 
-            this.pictCheck.Location = new System.Drawing.Point(542, 190);
-            this.pictCheck.Margin = new System.Windows.Forms.Padding(4);
-            this.pictCheck.Name = "pictCheck";
-            this.pictCheck.Size = new System.Drawing.Size(762, 308);
-            this.pictCheck.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictCheck.TabIndex = 3;
-            this.pictCheck.TabStop = false;
+            this.boxCheckImag.Location = new System.Drawing.Point(542, 190);
+            this.boxCheckImag.Margin = new System.Windows.Forms.Padding(4);
+            this.boxCheckImag.Name = "boxCheckImag";
+            this.boxCheckImag.Size = new System.Drawing.Size(762, 308);
+            this.boxCheckImag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.boxCheckImag.TabIndex = 3;
+            this.boxCheckImag.TabStop = false;
+            this.boxCheckImag.Click += new System.EventHandler(this.boxCheckImag_Click);
             // 
             // btnAddChek
             // 
@@ -175,17 +177,21 @@
             this.txtPicCheck.TabIndex = 7;
             this.txtPicCheck.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "ofd";
+            // 
             // formBanks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1340, 799);
+            this.ClientSize = new System.Drawing.Size(1014, 638);
             this.Controls.Add(this.txtPicCheck);
             this.Controls.Add(this.btnInsPicCheck);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAddChek);
-            this.Controls.Add(this.pictCheck);
+            this.Controls.Add(this.boxCheckImag);
             this.Controls.Add(this.txtChekName);
             this.Controls.Add(this.txtBankName);
             this.Controls.Add(this.txtBankCod);
@@ -203,7 +209,7 @@
             this.Text = "Banks";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.formBanks_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictCheck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.boxCheckImag)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,12 +222,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBankCod;
-        private System.Windows.Forms.PictureBox pictCheck;
+        private System.Windows.Forms.PictureBox boxCheckImag;
         public System.Windows.Forms.TextBox txtBankName;
         public System.Windows.Forms.TextBox txtChekName;
         private System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Button btnAddChek;
         private System.Windows.Forms.Button btnInsPicCheck;
         private System.Windows.Forms.TextBox txtPicCheck;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
